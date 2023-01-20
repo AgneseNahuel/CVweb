@@ -1,5 +1,8 @@
 from django.shortcuts import render
+from .models import *
 
 # Create your views here.
-def layout(request):
-    return render (request, "layout.html")
+def Python(request):
+    posts = modelPosteo.objects.all()
+    context = {'posts':posts}
+    return render (request, "Python.html", context)
