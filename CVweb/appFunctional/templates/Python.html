@@ -1,17 +1,11 @@
-{% extends 'layout.html' %}
+{% extends 'layout.html' %} {% csrf_token %}
 
 {% block infor %}  
 {% for post in posts %}
 
 <p style="color: rgb(35, 60, 97); background-color: blueviolet;">{{ post.Title }}</p>
-<p>{{ post.Field | safe }}</p>
+<p> <a href="{% url 'leerMas' post.pk %}">LeerMas</a></p>
 <br><br><br>
 
 {% endfor %}
-{% endblock %}
-
-{% block footer %}
-<p>Esta pagina esta orientada a ser un CV, diseñada para demostrar conocimientos y re estudiarlos. Es mi blog de notas y mi porfolio junto con mi 
-    linkedin y mi github donde voy a subir todos mis proyectos, agradesco la difucion...
-</p>
 {% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'layout.html' %} {% load static %} {% csrf_token %}
+
+{% block infor %}  
+
+
+<p style="color: rgb(35, 60, 97); background-color: blueviolet;">{{ object.Title }}</p>
+<p>{{ object.Field | safe }}</p>
+<br>
+
+
+{% endblock %}
