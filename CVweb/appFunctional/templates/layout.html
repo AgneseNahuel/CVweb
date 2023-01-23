@@ -7,15 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CVweb</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/barraNav.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
 </head>
 <body>
-    {% include 'barraNav.html' %}
+    <header>{% include 'barraNav.html' %}</header>
 
     {% block infor %}   {% endblock %}
-
+<hr>
     <footer>
         <p>Esta pagina esta orientada a ser un CV, diseñada para demostrar conocimientos y re estudiarlos. Es mi blog de notas y mi porfolio junto con mi 
-            linkedin y mi github donde voy a subir todos mis proyectos, agradesco la difucion...
+            <a target="_blank" href="https://www.linkedin.com/in/agnese-nahuel-7a8114248/">linkedin</a> y mi <a target="_blank" href="https://github.com/AgneseNahuel">github</a> donde voy a subir todos mis proyectos, agradesco la difucion... <br>
+            eMail: <a href="mailto:nahuelagnese_13@hotmail.com">CorreoElectronico</a>
         </p>
     </footer>
 </body>

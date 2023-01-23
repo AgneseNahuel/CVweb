@@ -1,11 +1,19 @@
-{% extends 'layout.html' %} {% csrf_token %}
+{% extends 'layout.html' %} {% csrf_token %} {% load static %} 
 
 {% block infor %}  
+<br>
+<img src="{% static 'image/Python.png' %}" width="150">
+
 {% for post in posts %}
 
-<p style="color: rgb(35, 60, 97); background-color: blueviolet;">{{ post.Title }}</p>
-<p> <a href="{% url 'leerMas' post.pk %}">LeerMas</a></p>
-<br><br><br>
+<article class="post">
+    <h2>
+        <p class="titulo"> <strong>{{ post.Title }}</strong></p>
+    </h2>
+    <p> <a href="{% url 'leerMasPython' post.pk %}">LeerMas</a></p>
+    <br><br><br>
+</article>
+
 
 {% endfor %}
 {% endblock %}
